@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Account - SQL Command App</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px 30px;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            color: #764ba2;
+            margin: 20px 0 10px 0;
+            font-size: 1.2em;
+        }
+        
+        .method-box {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+        
+        .method-box h3 {
+            margin-top: 0;
+        }
+        
+        .data-list {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+        
+        .data-list h3 {
+            color: #856404;
+            margin-top: 0;
+        }
+        
+        ul, ol {
+            margin-left: 25px;
+            margin-top: 10px;
+        }
+        
+        li {
+            margin: 8px 0;
+        }
+        
+        .warning {
+            background: #f8d7da;
+            border-left: 4px solid #dc3545;
+            padding: 15px 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+            color: #721c24;
+        }
+        
+        .info {
+            background: #d1ecf1;
+            border-left: 4px solid #17a2b8;
+            padding: 15px 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+            color: #0c5460;
+        }
+        
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        .email-link {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .email-link:hover {
+            text-decoration: underline;
+        }
+        
+        .footer {
+            background: #f8f9fa;
+            padding: 20px 30px;
+            text-align: center;
+            color: #666;
+            font-size: 0.9em;
+            border-top: 1px solid #e0e0e0;
+        }
+        
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 1.5em;
+            }
+            
+            .content {
+                padding: 20px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🗑️ SQL Command App</h1>
+            <p>Account & Data Deletion Policy</p>
+        </div>
+        
+        <div class="content">
+            <div class="section">
+                <h2>Account Deletion Overview</h2>
+                <p>
+                    <strong>SQL Command App</strong> developed by <strong>[Your Name/Company Name]</strong> respects your right to control your personal data. 
+                    You can request deletion of your data or your entire account at any time using the methods below.
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>How to Delete Your Account</h2>
+                <p>You have three options to request account deletion:</p>
+                
+                <div class="method-box">
+                    <h3>✅ Option 1: Delete from the App (Recommended)</h3>
+                    <ol>
+                        <li>Open <strong>SQL Command App</strong></li>
+                        <li>Go to <strong>Profile</strong> tab</li>
+                        <li>Tap the menu icon (⋮) in the top-right corner</li>
+                        <li>Select <strong>"Delete Account or Data"</strong></li>
+                        <li>Choose one of:
+                            <ul>
+                                <li><strong>Delete Data (Keep Account)</strong> - Removes your query history and tables but keeps your account active</li>
+                                <li><strong>Delete Account (All Data)</strong> - Permanently removes everything including your account</li>
+                            </ul>
+                        </li>
+                        <li>Confirm your action when prompted</li>
+                    </ol>
+                </div>
+
+                <div class="method-box">
+                    <h3>📧 Option 2: Email Request</h3>
+                    <p>Send an email to <a href="mailto:support@example.com" class="email-link">support@example.com</a> with:</p>
+                    <ul>
+                        <li><strong>Subject:</strong> "Account Deletion Request - SQL Command App"</li>
+                        <li><strong>Include:</strong> The email address associated with your account</li>
+                        <li><strong>Specify:</strong> Whether you want to delete only data or your entire account</li>
+                    </ul>
+                    <p>We will process your request within <strong>7 business days</strong> and send you a confirmation email.</p>
+                </div>
+
+                <div class="method-box">
+                    <h3>🌐 Option 3: Web Form (Coming Soon)</h3>
+                    <p>A web-based deletion request form will be available at this URL in the near future for users who prefer not to use the app or email.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>What Data is Deleted</h2>
+                
+                <div class="data-list">
+                    <h3>✔️ Data That Will Be Deleted</h3>
+                    <ul>
+                        <li><strong>Query History:</strong> All your saved SQL queries and execution history</li>
+                        <li><strong>User Tables:</strong> Any custom tables you created in the app</li>
+                        <li><strong>Leaderboard Presence:</strong> Your profile will be removed from public leaderboards</li>
+                        <li><strong>Account Credentials:</strong> Your email and authentication data (if full account deletion)</li>
+                        <li><strong>Profile Settings:</strong> All preferences and configurations</li>
+                    </ul>
+                </div>
+
+                <div class="info">
+                    <h3>📌 Data Retention Period</h3>
+                    <p>
+                        Deleted data may be retained in backup systems for <strong>30-90 days</strong> for security, fraud prevention, and legal compliance purposes. 
+                        After this period, all data is permanently removed from our systems.
+                    </p>
+                </div>
+
+                <div class="warning">
+                    <h3>⚠️ Important: Deletion is Permanent</h3>
+                    <p>
+                        Once your data is deleted and the retention period expires, <strong>it cannot be recovered</strong>. 
+                        Make sure to export any important queries or tables before proceeding.
+                    </p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Partial Data Deletion</h2>
+                <p>
+                    You can delete your query history and custom tables <strong>without deleting your account</strong>. 
+                    This allows you to keep using the app with a fresh start while maintaining your login credentials.
+                </p>
+                <p>To do this, select <strong>"Delete Data (Keep Account)"</strong> option in the app's Profile menu.</p>
+            </div>
+
+            <div class="section">
+                <h2>Verification</h2>
+                <p>
+                    For security purposes, we may require identity verification for deletion requests made via email or web form. 
+                    In-app deletion requests are automatically verified through your active login session.
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>Questions or Issues?</h2>
+                <p>
+                    If you have any questions about the deletion process or encounter any issues, please contact us at 
+                    <a href="mailto:support@example.com" class="email-link">support@example.com</a>
+                </p>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p><strong>SQL Command App</strong> by [Your Name/Company Name]</p>
+            <p>Last Updated: December 13, 2025</p>
+        </div>
+    </div>
+</body>
+</html>
